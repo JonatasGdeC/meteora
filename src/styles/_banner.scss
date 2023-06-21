@@ -1,0 +1,33 @@
+.banner{
+    &__desktop{
+        img{
+            width: 100%;
+            margin: 0;
+        }
+
+        @media(max-width: 768px){
+            display: none;
+        }
+    }
+
+    &__tablet{
+        display: none;
+        @media(max-width: 768px){
+            display: block;
+            width: 100%;
+        }
+
+        @media(max-width: 460px){
+            display: none;
+        }
+    }
+
+    &__mobile{
+        display: none;
+
+        @media(max-width: 460px){
+            display: block;
+            width: 100%;
+        }
+    }
+}
