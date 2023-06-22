@@ -1,0 +1,47 @@
+.category{
+    margin-top: 72px;
+    &__list{
+        display: flex;
+        gap: 30px;
+
+        &__item{
+            &__link{
+                text-decoration: none;
+                background-color: #000;
+                h3{
+                    background-color: #000;
+                    color: #fff;
+                    font-weight: 500;
+                    padding: 8px 16px;
+                    width: 160px;
+                    text-align: center;
+                }
+            }
+
+            &:hover{
+                scale: 1.03;
+            }
+        }
+    }
+
+    @media (max-width: 1150px){
+        &__list{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
+            text-align: -webkit-center;
+            margin: 0 40px;
+        }
+    }
+
+    @media (max-width: 615px){
+        &__list{
+            grid-template-columns: 1fr 1fr;
+            margin: 0 26px;
+
+            &__item{
+                max-width: 146px;
+            }
+        }
+    }
+}

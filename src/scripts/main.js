@@ -1,3 +1,6 @@
+//Efeito de scrooll
+AOS.init();
+
 //Programação para menu hamburguer
 const menuHamburguer = $('#menu--burguer')
 const listaMenuMobile = $('#menu--mobile')
@@ -37,5 +40,7 @@ $('.banner__mobile').slick({
     arrows: false,
     dots: true
 });
+
+
 
 
