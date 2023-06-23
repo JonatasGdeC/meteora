@@ -6,6 +6,8 @@
     align-items: center;
     justify-content: space-between;
     position: sticky;
+    top: 0;
+    left: 0;
     z-index: 1;
 
     &__icons{
@@ -73,6 +75,7 @@
             &__list{
                 gap: 20px;
                 margin-left: 20px;
+                font-size: 13px;
             }
         }
         &__search{

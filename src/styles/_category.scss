@@ -24,21 +24,18 @@
         }
     }
 
-    @media (max-width: 1150px){
+    @media (max-width: 1110px){
         &__list{
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            flex-wrap: wrap;
             gap: 30px;
-            text-align: -webkit-center;
+            justify-content: center;
             margin: 0 40px;
         }
     }
 
     @media (max-width: 615px){
         &__list{
-            grid-template-columns: 1fr 1fr;
             margin: 0 26px;
-
             &__item{
                 max-width: 146px;
             }
