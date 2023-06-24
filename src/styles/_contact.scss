@@ -1,0 +1,50 @@
+.contact{
+    display: flex;
+    justify-content: center;
+    &__section{
+        border: 2px solid #000;
+        margin: 70px 0px;
+        padding: 40px;
+        text-align: center;
+        width: 730px;
+
+        @media(max-width: 768px){
+            margin: 40px 20px;
+            padding: 24px 16px;
+        }
+
+        &__text{
+            font-size: 20px;
+
+            @media(max-width: 768px){
+                font-size: 16px;
+            }
+        }
+
+        &__form{
+            display: flex;
+            gap: 0;
+            justify-content: center;
+            margin-top: 24px;
+
+            &__input{
+                padding: 8px 16px;
+                width: 65%;
+                border: 1px solid #000;
+            }
+
+            &__button{
+                padding: 9px 16px;
+                color: #fff;
+                background-color: #9353FF;
+                border: none;
+                cursor: pointer;
+                transition: all ease .3s;
+
+                &:hover{
+                    opacity: .6;
+                }
+            }
+        }
+    }
+}

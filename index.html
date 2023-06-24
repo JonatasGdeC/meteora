@@ -21,7 +21,7 @@
 <body>
     <header class="header">
         <div class="header__icons">
-            <img src="./dist/images/Desktop/Logo desktop.png" alt="Logo Meteora">
+            <h1><img src="./dist/images/Desktop/Logo desktop.png" alt="Logo Meteora"></h1>
             <div class="header__icons--with-menu">
                 <span id="menu--burguer" class="material-symbols-outlined header__icons__burguer">menu</span>
                 <ul id="menu--mobile" class="header__icons__list">
@@ -42,8 +42,10 @@
             </div>
         </div>
         <div class="header__search">
-            <input class="header__search__input" type="search" placeholder="Digite o produto">
-            <button class="header__search__button" type="submit">Buscar</button>
+            <form>
+                <input class="header__search__input" type="search" placeholder="Digite o produto">
+                <button class="header__search__button" type="submit">Buscar</button>
+            </form>
         </div>
     </header>
 
@@ -178,6 +180,51 @@
             </ul>
         </div>
     </section>
+
+    <section class="info">
+        <div class="container">
+            <h2 class="info__title">Conheça todas as nossas facilidades:</h2>
+            <ul class="info__list">
+                <li class="info__list__item">
+                    <img src="./dist/images/Desktop/Ícones/x-diamond (2).png" alt="x-diamond">
+                    <div class="info__list__item__description">
+                        <p class="info__list__item__description__title">Pague pelo Pix</p>
+                        <p class="info__list__item__description__text">Ganhe 5% OFF em pagamentos via PIX</p>
+                    </div>
+                </li>
+
+                <li class="info__list__item">
+                    <img src="./dist/images/Desktop/Ícones/arrow-repeat (2).png" alt="arrow-repeat">
+                    <div class="info__list__item__description">
+                        <p class="info__list__item__description__title">Troca Grátis</p>
+                        <p class="info__list__item__description__text">Fique livre para trocar em até 30 dias.</p>
+                    </div>
+                </li>
+
+                <li class="info__list__item">
+                    <img src="./dist/images/Desktop/Ícones/flower1 (3).png" alt="flower">
+                    <div class="info__list__item__description">
+                        <p class="info__list__item__description__title">Sustentabilidade</p>
+                        <p class="info__list__item__description__text">Moda responsável, que respeita o meio ambiente.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="contact__section">
+            <p class="contact__section__text">Quer receber nossas novidades, promoções exclusivas e 10% OFF na primeira compra? Cadastre-se!</p>
+            <form class="contact__section__form">
+                <input class="contact__section__form__input" type="email" placeholder="Digite seu email">
+                <button class="contact__section__form__button" type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        2023 &copy; Desenvolvido por Jônatas | Projeto fictício sem fins comerciais.
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
