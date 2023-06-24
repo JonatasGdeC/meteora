@@ -1,6 +1,8 @@
+@use 'variables';
+
 .header{
-    background-color: #000;
-    color: #fff;
+    background-color: variables.$color--background-secundary;
+    color: variables.$color--text-secudary;
     padding: 13px 23px;
     display: flex;
     align-items: center;
@@ -31,7 +33,7 @@
                 transition: all ease .3s;
                 a{
                     text-decoration: none;
-                    color: #fff;
+                    color: variables.$color--text-secudary;
                 }
 
                 &:hover{
@@ -56,15 +58,15 @@
 
         &__button{
             padding: 9px 12px;
-            border: 1px solid #fff;
-            background-color: #000;
-            color: #fff;
+            border: 1px solid variables.$color--text-secudary;
+            background-color: variables.$color--background-secundary;
+            color: variables.$color--text-secudary;
             cursor: pointer;
             transition: all ease .3s;
 
             &:hover{
-                background-color: #fff;
-                color: #000;
+                background-color: variables.$color--text-secudary;
+                color: variables.$color--background-secundary;
             }
         }
     }
@@ -79,6 +81,8 @@
             }
         }
         &__search{
+            display: flex;
+            justify-content: center;
             &__input{
                 width:145px;
                 height: 38px;
@@ -108,7 +112,7 @@
             }
             &__burguer{
                 display: block;
-                color: #DAFF01;
+                color: variables.$color--text-tertiary;
             }
 
             &__list{
@@ -125,14 +129,14 @@
                 &__close{
                     display: block;
                     text-align: right;
-                    color: #DAFF01;
+                    color: variables.$color--text-tertiary;
                 }
 
                 li{
                     gap: 16px;
                     margin-top: 11px;
                     padding-bottom: 8px;
-                    border-bottom: 1px solid #fff;
+                    border-bottom: 1px solid variables.$color--text-secudary;
 
                     &:last-child{
                         border-bottom: none;
@@ -148,21 +152,26 @@
 
         &__search{
             width: 100%;
-            background-color: #fff;
+            background-color: variables.$color--text-secudary;
             text-align: center;
             padding: 24px 25px;
             display: flex;
             gap: 8px;
 
             &__input{
-                border: 1px solid #000;
-                width: 100%;
+                border: 1px solid variables.$color--background-secundary;
+                width: 220px;
+                font-size: 13px;
+
+                &::placeholder{
+                    font-size: 13px;
+                }
             }
 
             &__button{
-                background-color: #fff;
-                color: #000;
-                border: 1px solid #000;
+                background-color: variables.$color--text-secudary;
+                color: variables.$color--background-secundary;
+                border: 1px solid variables.$color--background-secundary;
                 font-weight: 500;
             }
         }

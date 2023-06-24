@@ -1,3 +1,5 @@
+@use 'variables';
+
 .category{
     margin-top: 72px;
     &__list{
@@ -7,10 +9,10 @@
         &__item{
             &__link{
                 text-decoration: none;
-                background-color: #000;
+                background-color: variables.$color--background-secundary;
                 h3{
-                    background-color: #000;
-                    color: #fff;
+                    background-color: variables.$color--background-secundary;
+                    color: variables.$color--text-secudary;
                     font-weight: 500;
                     padding: 8px 16px;
                     width: 160px;
