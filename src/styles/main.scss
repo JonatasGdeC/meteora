@@ -6,7 +6,7 @@
 @use 'info';
 @use 'contact';
 @use 'footer';
-
+@use 'modal';
 *{
     margin: 0;
     padding: 0;
@@ -29,3 +29,4 @@
     text-align: center;
     margin-bottom: 32px;
 }
+

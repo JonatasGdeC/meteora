@@ -215,10 +215,23 @@
     <section class="contact">
         <div class="contact__section">
             <p class="contact__section__text">Quer receber nossas novidades, promoções exclusivas e 10% OFF na primeira compra? Cadastre-se!</p>
-            <form class="contact__section__form">
-                <input class="contact__section__form__input" type="email" placeholder="Digite seu email">
-                <button class="contact__section__form__button" type="submit">Enviar</button>
+            <form id="form--contact" class="contact__section__form">
+                <input class="contact__section__form__input" type="email" placeholder="Digite seu email" name="email">
+                <button id="enviar--email" class="contact__section__form__button" type="button">Enviar</button>
             </form>
+        </div>
+    </section>
+
+    <section class="modal">
+        <div class="modal__email">
+            <div class="modal__email__header">
+                <img src="./dist/images/Desktop/Ícones/check-circle.svg" alt="Check">
+                <p class="modal__email__header__text">E-mail cadastrado com sucesso!</p>
+                <span id="button--close" class="material-symbols-outlined modal__email__header__close">close</span>
+            </div>
+            <div class="modal__email__body">
+                <p>Em breve você receberá novidades exclusivas da Meteora.</p>
+            </div>
         </div>
     </section>
 
@@ -226,9 +239,12 @@
         2023 &copy; Desenvolvido por Jônatas | Projeto fictício sem fins comerciais.
     </footer>
 
+
+
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./dist/scripts/jquery.validate.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="./dist/scripts/main.js"></script>
 </body>

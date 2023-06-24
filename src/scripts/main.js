@@ -41,6 +41,35 @@ $('.banner__mobile').slick({
     dots: true
 });
 
+// Programação modal 1
+$('#enviar--email').click(function(){
+    const modal = $('.modal');
+    const mensagemSucesso = $('modal__email');
+    const input = $('.contact__section__form__input');
+
+    var sEmail	= $(".contact__section__form__input").val();
+    var emailFilter=/^.+@.+\..{2,}$/;
+    var illegalChars= /[\(\)\<\>\,\;\:\\\/\"\[\]]/
+
+    if(!(emailFilter.test(sEmail))||sEmail.match(illegalChars)){
+        input.addClass('contact__section__form__input--is-error')
+    } else{
+        input.removeClass('contact__section__form__input--is-error')
+        modal.css({display:'block'})
+        mensagemSucesso.css({display:'block'})
+    }
+})
+
+$('#button--close').click(function(){
+    const modal = $('.modal');
+    const mensagemSucesso = $('modal__email');
+    const input = $('.contact__section__form__input');
+
+    input.val('');
+    modal.css({display:'none'})
+    mensagemSucesso.css({display:'none'})
+})
+
 
 
 

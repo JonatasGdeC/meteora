@@ -33,6 +33,15 @@
                 padding: 8px 16px;
                 width: 65%;
                 border: 1px solid variables.$color--background-secundary;
+
+                &--is-error{
+                    background-color: #fbd8d6;
+                    border: 1px solid #FF6155;
+
+                    &::placeholder{
+                        color: #FF6155; 
+                    }
+                }
             }
 
             &__button{
