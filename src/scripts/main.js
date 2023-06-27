@@ -45,7 +45,7 @@ $('.banner__mobile').slick({
 $('#form--contact').submit(function(e){
     e.preventDefault();
     const modal = $('.modal');
-    const mensagemSucesso = $('modal__email');
+    const mensagemSucesso = $('.modal__email');
     const input = $('.contact__section__form__input');
 
     var sEmail	= $(".contact__section__form__input").val();
@@ -61,14 +61,29 @@ $('#form--contact').submit(function(e){
     }
 })
 
+// Programação modal 2
+const botaoVerMais = document.querySelectorAll('#btn--ver-mais')
+const modal = document.querySelector('.modal')
+const detalhesProduto = document.querySelector('.modal__product')
+
+for(let i = 0; i<botaoVerMais.length; i++){
+    botaoVerMais[i].addEventListener('click', function(){
+        modal.style.display = 'block';
+        detalhesProduto.style.display = 'block';
+    })
+}
+
+// Programação botão fechar modal
 $('#button--close').click(function(){
     const modal = $('.modal');
-    const mensagemSucesso = $('modal__email');
+    const mensagemSucesso = $('.modal__email');
+    const detalhesProduto = $('.modal__product')
     const input = $('.contact__section__form__input');
 
     input.val('');
     modal.css({display:'none'})
     mensagemSucesso.css({display:'none'})
+    detalhesProduto.css({display: 'none'})
 })
 
 
