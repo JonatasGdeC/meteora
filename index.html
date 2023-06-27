@@ -123,7 +123,7 @@
                         <h3>Camiseta Conforto</h3>
                         <p class="products__list__item__description__text">Multicores e tamanhos. Tecido de algodão 100%, fresquinho para o verão. Modelagem unissex.</p>
                         <p class="products__list__item__description__value">R$ 70,00</p>
-                        <button class="products__list__item__description__button">Ver mais</button>
+                        <button class="buttonPrimary">Ver mais</button>
                     </div>
                 </li>
 
@@ -133,7 +133,7 @@
                         <h3>Calça Alfaiataria</h3>
                         <p class="products__list__item__description__text">Modelo Wide Leg alfaiataria em linho. Uma peça pra vida toda!</p>
                         <p class="products__list__item__description__value">R$ 180,00</p>
-                        <button class="products__list__item__description__button">Ver mais</button>
+                        <button class="buttonPrimary">Ver mais</button>
                     </div>
                 </li>
 
@@ -143,7 +143,7 @@
                         <h3>Tênis Chunky</h3>
                         <p class="products__list__item__description__text">Snicker casual com solado mais alto e modelagem robusta. Modelo unissex.</p>
                         <p class="products__list__item__description__value">R$ 250,00</p>
-                        <button class="products__list__item__description__button">Ver mais</button>
+                        <button class="buttonPrimary">Ver mais</button>
                     </div>
                 </li>
 
@@ -153,7 +153,7 @@
                         <h3>Jaqueta Jeans</h3>
                         <p class="products__list__item__description__text">Modelo unissex oversized com gola de camurça. Atemporal e autêntica!.</p>
                         <p class="products__list__item__description__value">R$ 150,00</p>
-                        <button class="products__list__item__description__button">Ver mais</button>
+                        <button class="buttonPrimary">Ver mais</button>
                     </div>
                 </li>
 
@@ -163,7 +163,7 @@
                         <h3>Óculos Redondo</h3>
                         <p class="products__list__item__description__text">Armação metálica em grafite com lentes arredondadas. Sem erro!</p>
                         <p class="products__list__item__description__value">R$ 120,00</p>
-                        <button class="products__list__item__description__button">Ver mais</button>
+                        <button class="buttonPrimary">Ver mais</button>
                     </div>
                 </li>
 
@@ -173,7 +173,7 @@
                         <h3>Bolsa coringa</h3>
                         <p class="products__list__item__description__text">Bolsa camel em couro sintético de alta duração. Ideal para acompanhar você por uma vida!</p>
                         <p class="products__list__item__description__value">R$ 120,00</p>
-                        <button class="products__list__item__description__button">Ver mais</button>
+                        <button class="buttonPrimary">Ver mais</button>
                     </div>
                 </li>
 
@@ -217,7 +217,7 @@
             <p class="contact__section__text">Quer receber nossas novidades, promoções exclusivas e 10% OFF na primeira compra? Cadastre-se!</p>
             <form id="form--contact" class="contact__section__form">
                 <input class="contact__section__form__input" type="email" placeholder="Digite seu email" name="email">
-                <button id="enviar--email" class="contact__section__form__button" type="button">Enviar</button>
+                <button id="enviar--email" class="buttonPrimary" type="submit">Enviar</button>
             </form>
         </div>
     </section>
@@ -233,8 +233,42 @@
                 <p>Em breve você receberá novidades exclusivas da Meteora.</p>
             </div>
         </div>
-    </section>
 
+        <div class="modal__product">
+            <div class="modal__product__body">
+                <img class="modal__product__image" src="./dist/images/Desktop/Imagens Cards/Jaqueta.png" alt="Jaqueta Jeans">
+                <div class="modal__product__description">
+                    <h3 class="modal__product__description__title">Jaqueta Jeans</h3>
+                    <p class="modal__product__description__text">Modelo unissex oversized com gola de camurça. Atemporal e autêntica!</p>
+                    <p class="modal__product__description__value">R$ 150,00</p>
+                    <p class="modal__product__description__info">Vendido e entregue por Riachuelo</p>
+                    <form  class="modal__product__description__form">
+                        <legend class="modal__product__description__form__title">Cores:</legend>
+                        <fieldset class="modal__product__description__form__options">
+                            <label for="radio--azul-claro"><input type="radio" name="cor" value="azul-claro" id="radio--azul-claro">Azul claro</label>
+                            <label for="radio--branco"><input type="radio" name="cor" value="branco" id="radio--branco">Branco</label>
+                            <label for="radio--preto"><input type="radio" name="cor" value="preto" id="radio--preto" checked>Preto</label>
+                        </fieldset>
+                    
+                        <legend class="modal__product__description__form__title">Tamanho:</legend>
+                        <fieldset class="modal__product__description__form__options">
+                            <label for="radio--tamanho-p"><input type="radio" name="tamanho" value="tamanho-p" id="radio--tamanho-p">P</label>
+                            <label for="radio--tamanho-pp"><input type="radio" name="tamanho" value="tamanho-pp" id="radio--tamanho-pp">PP</label>
+                            <label for="radio--tamanho-m"><input type="radio" name="tamanho" value="tamanho-m" id="radio--tamanho-m" checked>M</label>
+                            <label for="radio--tamanho-g"><input type="radio" name="tamanho" value="tamanho-g" id="radio--tamanho-g">G</label>
+                            <label for="radio--tamanho-gg"><input type="radio" name="tamanho" value="tamanho-gg" id="radio--tamanho-gg" checked>GG</label>
+                        </fieldset>
+                        <button type="submit" class="buttonPrimary">Adicionar à sacola</button>
+                    </form>
+                </div>
+            </div>
+            <div class="modal__product__footer">
+                <img src="./dist/images/Desktop/Ícones/check-circle.svg" alt="Check">
+                <p  class="modal__product__footer__text">E-mail cadastrado com sucesso!</p>
+                <span id="button--close" class="material-symbols-outlined modal__product__footer__close">close</span>
+            </div>
+        </div>
+    </section>
     <footer class="footer">
         2023 &copy; Desenvolvido por Jônatas | Projeto fictício sem fins comerciais.
     </footer>

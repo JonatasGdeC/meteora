@@ -43,19 +43,6 @@
                     }
                 }
             }
-
-            &__button{
-                padding: 9px 16px;
-                color: variables.$color--text-secudary;
-                background-color: variables.$color--background-button;
-                border: none;
-                cursor: pointer;
-                transition: all ease .3s;
-
-                &:hover{
-                    opacity: .6;
-                }
-            }
         }
     }
 }

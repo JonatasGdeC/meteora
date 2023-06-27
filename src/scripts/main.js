@@ -42,7 +42,8 @@ $('.banner__mobile').slick({
 });
 
 // Programação modal 1
-$('#enviar--email').click(function(){
+$('#form--contact').submit(function(e){
+    e.preventDefault();
     const modal = $('.modal');
     const mensagemSucesso = $('modal__email');
     const input = $('.contact__section__form__input');

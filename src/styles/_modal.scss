@@ -1,5 +1,38 @@
 @use 'variables';
 
+@mixin modalFormat(){
+    max-width: 700px;
+    width: 100%;
+    margin: 10% auto auto;
+    box-shadow: 0px 4px 15px 0px rgba(44, 63, 88, 0.35);
+    border-radius: 4px;
+}
+
+@mixin formatModalHeaderAndFooter(){
+    background-color: variables.$color--background-secundary;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 18px 28px 18px 16px;
+}
+
+@mixin titleModal(){
+    color: variables.$color--text-secudary;
+    font-size: 20px;
+    width: 100%
+}
+
+@mixin closeModal(){
+    color: #6C757D;
+    font-size: 32px;
+    cursor: pointer;
+    transition: all ease .3s;
+
+    &:hover{
+        color: variables.$color--text-tertiary;
+    }
+}
+
 .modal{
     display: none;
     position: fixed;
@@ -10,42 +43,101 @@
     height: 100%;
     overflow: auto; 
     background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.8); 
+    background-color: rgba(0,0,0,0.7); 
     &__email{
-        max-width: 700px;
-        width: 100%;
-        margin: 10% auto auto;
-        box-shadow: 0px 4px 15px 0px rgba(44, 63, 88, 0.35);
-        border-radius: 4px;
-
+        @include modalFormat();
         &__header{
-            background-color: variables.$color--background-secundary;
-            display: flex;
-            gap: 20px;
-            align-items: center;
-            padding: 18px 28px 18px 16px;
+            @include formatModalHeaderAndFooter();
 
             &__text{
-                color: variables.$color--text-secudary;
-                font-size: 20px;
-                width: 100%
+                @include titleModal();
             }
 
             &__close{
-                color: #6C757D;
-                font-size: 32px;
-                cursor: pointer;
-                transition: all ease .3s;
-
-                &:hover{
-                    color: variables.$color--text-tertiary;
-                }
+                @include closeModal();
             }
         }
 
         &__body{
             padding: 16px 16px 32px;
             background-color: variables.$color--text-secudary;
+        }
+    }
+
+    &__product{
+        @include modalFormat();
+
+        &__body{
+            padding: 16px 16px 32px;
+            display: flex;
+
+            img{
+                height: 422px;
+            }
+        }
+
+        &__description{
+            padding: 0 16px;
+
+            &__text{
+                font-size: 13px;
+                line-height: 20px;
+                margin: 24px 0;
+            }
+
+            &__value{
+                font-size: 20px;
+                font-weight: 500;
+                padding: 24px 0;
+                border-top: 1px solid variables.$color--background-secundary
+            }
+
+            &__info{
+                font-size: 13px;
+                line-height: 20px;
+                color: #ADB5BD;
+                padding-bottom: 16px;
+            }
+
+            &__form{
+                &__options{
+                    border: none;
+                    display: flex;
+                    gap: 16px;
+                    label{
+                        display: flex;
+                        flex-direction: column;
+                        font-size: 13px;
+                        cursor: pointer;
+                        margin-bottom: 16px;
+                    }
+
+                    input{
+                        cursor: pointer;
+                        margin-bottom: 8px;
+                    }
+                }
+
+                &__title{
+                    font-size: 13px;
+                    font-weight: bold;
+                    padding: 16px 0;
+
+                    border-top: 1px solid #ADB5BD;
+                }
+            }
+        }
+
+        &__footer{
+            @include formatModalHeaderAndFooter();
+
+            &__text{
+                @include titleModal();
+            }
+
+            &__close{
+                @include closeModal();
+            }
         }
     }
 }
