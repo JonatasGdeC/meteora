@@ -1,16 +1,34 @@
 //Efeito de scrooll
 AOS.init();
+// Efeito click
+const movimentoIR = [
+    {transform: "translateX(300px)"},
+    {transform: "translateX(0px)"},
+]
+
+const verMais =[
+    {transform: "scale(0)"},
+    {transform: "scale(1)"},
+]
+
+const tempoEvento = {
+    duration: 300,
+    iterations: 1,
+}
+
 
 //Programação para menu hamburguer
-const menuHamburguer = $('#menu--burguer')
-const listaMenuMobile = $('#menu--mobile')
-const menuFechar = $('#menu--close')
+const menuHamburguer = document.getElementById('menu--burguer');
+const listaMenuMobile = document.getElementById('menu--mobile');
+const menuFechar = document.getElementById('menu--close');
 
-menuHamburguer.click(function(){
-    $('#menu--mobile').slideToggle()
+menuHamburguer.addEventListener('click', function(){
+    listaMenuMobile.style.display = 'block';
+    listaMenuMobile.animate(movimentoIR, tempoEvento)
 })
-menuFechar.click(function(){
-    $('#menu--mobile').slideToggle()
+
+menuFechar.addEventListener('click', function(){
+    listaMenuMobile.style.display = 'none';
 })
 
 //Programação para Carrousel de Banners
@@ -22,7 +40,6 @@ $('.banner__desktop').slick({
     arrows: false,
     dots: true
 });
-
 $('.banner__tablet').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -31,7 +48,6 @@ $('.banner__tablet').slick({
     arrows: false,
     dots: true
 });
-
 $('.banner__mobile').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -41,50 +57,63 @@ $('.banner__mobile').slick({
     dots: true
 });
 
-// Programação modal 1
-$('#form--contact').submit(function(e){
-    e.preventDefault();
-    const modal = $('.modal');
-    const mensagemSucesso = $('.modal__email');
-    const input = $('.contact__section__form__input');
+// Constantes Modal
+const modal = document.querySelector('.modal');
+const detalhesProduto = document.querySelector('.modal__product');
+const mensagemSucesso = document.querySelector('.modal__email');
 
-    var sEmail	= $(".contact__section__form__input").val();
+// Programação modal 1
+const formNovidades = document.querySelector('#form--contact');
+const inputParaNovidades = document.querySelector('.contact__section__form__input');
+
+formNovidades.addEventListener('submit',function(e){
+    e.preventDefault();
+    var sEmail = document.querySelector('.contact__section__form__input').value;
     var emailFilter=/^.+@.+\..{2,}$/;
-    var illegalChars= /[\(\)\<\>\,\;\:\\\/\"\[\]]/
+    var illegalChars= /[\(\)\<\>\,\;\:\\\/\"\[\]]/;
 
     if(!(emailFilter.test(sEmail))||sEmail.match(illegalChars)){
-        input.addClass('contact__section__form__input--is-error')
+        inputParaNovidades.classList.add('contact__section__form__input--is-error');
     } else{
-        input.removeClass('contact__section__form__input--is-error')
-        modal.css({display:'block'})
-        mensagemSucesso.css({display:'block'})
+        inputParaNovidades.classList.remove('contact__section__form__input--is-error');
+        modal.style.display = 'block';
+        mensagemSucesso.style.display = 'block';
+        mensagemSucesso.animate(verMais, tempoEvento)
     }
 })
 
 // Programação modal 2
 const botaoVerMais = document.querySelectorAll('#btn--ver-mais')
-const modal = document.querySelector('.modal')
-const detalhesProduto = document.querySelector('.modal__product')
 
 for(let i = 0; i<botaoVerMais.length; i++){
     botaoVerMais[i].addEventListener('click', function(){
         modal.style.display = 'block';
         detalhesProduto.style.display = 'block';
+        detalhesProduto.animate(verMais, tempoEvento)
     })
 }
 
 // Programação botão fechar modal
-$('#button--close').click(function(){
-    const modal = $('.modal');
-    const mensagemSucesso = $('.modal__email');
-    const detalhesProduto = $('.modal__product')
-    const input = $('.contact__section__form__input');
+const btnClose = document.querySelectorAll('#button--close')
+for (let i = 0; i<btnClose.length; i++){
+    btnClose[i].addEventListener('click', function(){
+    const modal = document.querySelector('.modal')
+    const mensagemSucesso = document.querySelector('.modal__email')
+    const detalhesProduto = document.querySelector('.modal__product')
 
-    input.val('');
-    modal.css({display:'none'})
-    mensagemSucesso.css({display:'none'})
-    detalhesProduto.css({display: 'none'})
-})
+    mensagemSucesso.style.display = 'none';
+    detalhesProduto.style.display = 'none';
+    modal.style.display = 'none';
+    })
+}
+
+
+
+    
+
+
+
+
 
 
 
