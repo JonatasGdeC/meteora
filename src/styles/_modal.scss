@@ -7,6 +7,10 @@
     border-radius: 4px;
     background-color: #fff;
     display: none;
+
+    @media(max-width: 720px){
+        width: 343px;
+    }
 }
 
 @mixin formatModalHeaderAndFooter(){
@@ -70,13 +74,23 @@
     &__product{
         @include modalFormat();
         margin: 3% auto auto;
-
+        
         &__body{
             padding: 16px 16px 32px;
             display: flex;
 
+            @media(max-width: 720px){
+                flex-direction: column;
+            }
+
             img{
                 height: 422px;
+
+                @media(max-width: 720px){
+                    width: 311px;
+                    height: auto;
+                    margin-bottom: 24px;
+                }
             }
         }
 

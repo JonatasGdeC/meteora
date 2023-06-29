@@ -1,21 +1,31 @@
 //Efeito de scrooll
 AOS.init();
-// Efeito click
+
+// Efeito click:
+// Menu
 const movimentoIR = [
     {transform: "translateX(300px)"},
     {transform: "translateX(0px)"},
 ]
-
+const movimentoVOLTAR = [
+    {transform: "translateX(0px)"},
+    {transform: "translateX(300px)"},
+]
+// Cards e email cadastrado
 const verMais =[
     {transform: "scale(0)"},
     {transform: "scale(1)"},
 ]
 
+const verMenos =[
+    {transform: "scale(1)"},
+    {transform: "scale(0)"},
+]
+
 const tempoEvento = {
-    duration: 300,
+    duration: 200,
     iterations: 1,
 }
-
 
 //Programação para menu hamburguer
 const menuHamburguer = document.getElementById('menu--burguer');
@@ -28,7 +38,9 @@ menuHamburguer.addEventListener('click', function(){
 })
 
 menuFechar.addEventListener('click', function(){
-    listaMenuMobile.style.display = 'none';
+    listaMenuMobile.animate(movimentoVOLTAR, tempoEvento).addEventListener('finish', ()=>{
+        listaMenuMobile.style.display = 'none'
+    })
 })
 
 //Programação para Carrousel de Banners
@@ -85,7 +97,11 @@ formNovidades.addEventListener('submit',function(e){
 // Programação modal 2
 const botaoVerMais = document.querySelectorAll('#btn--ver-mais')
 
+
 for(let i = 0; i<botaoVerMais.length; i++){
+    const cardSelecionado = botaoVerMais[i]
+    const imageCardSelecionado = cardSelecionado.classList[1]
+
     botaoVerMais[i].addEventListener('click', function(){
         modal.style.display = 'block';
         detalhesProduto.style.display = 'block';
@@ -95,15 +111,19 @@ for(let i = 0; i<botaoVerMais.length; i++){
 
 // Programação botão fechar modal
 const btnClose = document.querySelectorAll('#button--close')
+
 for (let i = 0; i<btnClose.length; i++){
     btnClose[i].addEventListener('click', function(){
-    const modal = document.querySelector('.modal')
-    const mensagemSucesso = document.querySelector('.modal__email')
-    const detalhesProduto = document.querySelector('.modal__product')
-
-    mensagemSucesso.style.display = 'none';
-    detalhesProduto.style.display = 'none';
-    modal.style.display = 'none';
+        mensagemSucesso.animate(verMenos, tempoEvento).addEventListener('finish', ()=>{
+            mensagemSucesso.style.display = 'none';
+            modal.style.display = 'none';
+            inputParaNovidades.value = '';
+        })
+        
+        detalhesProduto.animate(verMenos, tempoEvento).addEventListener('finish', ()=>{
+            detalhesProduto.style.display = 'none';
+            modal.style.display = 'none';
+        })
     })
 }
 
