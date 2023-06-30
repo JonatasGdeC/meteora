@@ -85,7 +85,6 @@
 
             img{
                 height: 422px;
-                display: block;
 
                 @media(max-width: 720px){
                     width: 311px;
@@ -159,4 +158,9 @@
             }
         }
     }
+}
+
+.material-symbols-outlined{
+    color: variables.$color--text-tertiary;
+    font-size: 32px;
 }
