@@ -6,7 +6,7 @@ E-commerce fictício de roupas atemporais, casuais e sem gênero.
 | -------------  | --- |
 | :sparkles: Nome        | **Meteora**
 | :label: Tecnologias | html, css, javascript, jquery
-| :rocket: URL         | https://url-deploy.com.br](https://meteora-lac.vercel.app/
+| :rocket: URL         | [https://url-deploy.com.br](https://meteora-lac.vercel.app/](https://meteora-lac.vercel.app/)
 | :fire: Desafio     |
 
 <!-- Inserir imagem com a #vitrinedev ao final do link -->
