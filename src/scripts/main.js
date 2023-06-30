@@ -99,9 +99,6 @@ const botaoVerMais = document.querySelectorAll('#btn--ver-mais')
 
 
 for(let i = 0; i<botaoVerMais.length; i++){
-    const cardSelecionado = botaoVerMais[i]
-    const imageCardSelecionado = cardSelecionado.classList[1]
-
     botaoVerMais[i].addEventListener('click', function(){
         modal.style.display = 'block';
         detalhesProduto.style.display = 'block';
