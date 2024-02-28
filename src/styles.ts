@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 
 export const colors = {
   white: '#fff',
@@ -27,8 +27,15 @@ export const GlobalStyle = createGlobalStyle`
 }
 
 .container{
-  max-width: ${breackpointers.desktop};
+  max-width: 1110px;
   width: 100%;
   margin: 0 auto;
 }
+`
+
+export const TitleSection = styled.h2`
+  margin-bottom: 32px;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 400;
 `
