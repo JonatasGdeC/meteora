@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { breackpointers, colors } from '../../styles'
 
 export const Header = styled.header`
   display: flex;
@@ -27,6 +27,10 @@ export const Links = styled.div`
         }
       }
     }
+
+    @media (max-width: ${breackpointers.tablet}) {
+      display: none;
+    }
   }
 `
 
@@ -51,5 +55,52 @@ export const Search = styled.form`
     &:hover {
       opacity: 0.8;
     }
+  }
+
+  @media (max-width: ${breackpointers.tablet}) {
+    display: none;
+  }
+`
+
+export const Hamburguer = styled.button`
+  background-color: transparent;
+  border: none;
+
+  @media (min-width: ${breackpointers.tablet}) {
+    display: none;
+  }
+`
+
+export const MenuMobile = styled.div`
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  padding: 16px 24px;
+  background-color: ${colors.grayMenu};
+
+  header {
+    text-align: right;
+    margin-bottom: 12px;
+
+    button {
+      background-color: transparent;
+      border: none;
+    }
+  }
+
+  ul {
+    li {
+      padding: 8px 0;
+      border-top: 1px solid ${colors.white};
+      a {
+        color: ${colors.white};
+      }
+    }
+  }
+
+  &.is--open {
+    display: block;
   }
 `
