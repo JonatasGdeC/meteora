@@ -1,5 +1,13 @@
+import Header from './components/Header'
+import { GlobalStyle } from './styles'
+
 function App() {
-  return <div>teste</div>
+  return (
+    <>
+      <GlobalStyle />
+      <Header />
+    </>
+  )
 }
 
 export default App
