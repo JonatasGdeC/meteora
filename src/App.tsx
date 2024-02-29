@@ -6,6 +6,8 @@ import Infos from './components/Infos'
 
 import { products } from './mocks/Products'
 import { GlobalStyle } from './styles'
+import Message from './components/Message'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         <ProductsList products={products} />
       </div>
       <Infos />
+      <Message />
+      <Footer />
     </>
   )
 }
