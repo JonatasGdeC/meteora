@@ -39,3 +39,17 @@ export const TitleSection = styled.h2`
   font-size: 32px;
   font-weight: 400;
 `
+
+export const Button = styled.button`
+  border: none;
+  padding: 8px 16px;
+  font-size: 16px;
+  color: ${colors.white};
+  background-color: ${colors.purple};
+  cursor: pointer;
+  transition: all ease 0.3s;
+
+  &:hover {
+    scale: 1.03;
+  }
+`
