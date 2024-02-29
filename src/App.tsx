@@ -1,10 +1,11 @@
+import Header from './components/Header'
 import Banner from './components/Banner'
 import Category from './components/Category'
-import Header from './components/Header'
 import ProductsList from './components/ProductsList'
-import { GlobalStyle } from './styles'
+import Infos from './components/Infos'
 
 import { products } from './mocks/Products'
+import { GlobalStyle } from './styles'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Category />
         <ProductsList products={products} />
       </div>
+      <Infos />
     </>
   )
 }

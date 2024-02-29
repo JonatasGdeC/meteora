@@ -32,12 +32,17 @@ export const GlobalStyle = createGlobalStyle`
   margin: 0 auto;
 }
 `
+type TitleSection = {
+  color: 'black' | 'white'
+  marginBottom: 32 | 40
+}
 
-export const TitleSection = styled.h2`
-  margin-bottom: 32px;
+export const TitleSection = styled.h2<TitleSection>`
+  margin-bottom: ${(props) => (props.marginBottom === 32 ? '32px' : '40px')};
   text-align: center;
   font-size: 32px;
   font-weight: 400;
+  color: ${(props) => (props.color === 'white' ? colors.white : colors.black)};
 `
 
 export const Button = styled.button`

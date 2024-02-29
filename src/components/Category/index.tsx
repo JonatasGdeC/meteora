@@ -11,7 +11,9 @@ import * as S from './styles'
 const Category = () => {
   return (
     <S.Category>
-      <TitleSection>Busque por categoria</TitleSection>
+      <TitleSection color="black" marginBottom={32}>
+        Busque por categoria
+      </TitleSection>
       <ul>
         <li>
           <a href="#">

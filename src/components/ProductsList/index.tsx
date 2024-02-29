@@ -11,7 +11,9 @@ type Props = {
 const ProductsList = ({ products }: Props) => {
   return (
     <>
-      <TitleSection>Produtos que estão bombando!</TitleSection>
+      <TitleSection color="black" marginBottom={32}>
+        Produtos que estão bombando!
+      </TitleSection>
       <List>
         {products.map((product) => (
           <Product
