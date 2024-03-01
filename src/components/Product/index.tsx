@@ -2,6 +2,7 @@ import { Button } from '../../styles'
 import iconCheck from '../../assets/icons/check.png'
 import iconClose from '../../assets/icons/close.png'
 import * as S from './styles'
+import { useState } from 'react'
 
 type Props = {
   image: string
@@ -18,6 +19,8 @@ export const parseToBrl = (amount = 0) => {
 }
 
 const Product = ({ image, title, description, price }: Props) => {
+  const [openModal, setOpenModal] = useState(false)
+
   return (
     <>
       <S.Card>
@@ -26,18 +29,18 @@ const Product = ({ image, title, description, price }: Props) => {
           <h3>{title}</h3>
           <p className="description">{description}</p>
           <p className="price">{parseToBrl(price)}</p>
-          <Button>Ver mais</Button>
+          <Button onClick={() => setOpenModal(true)}>Ver mais</Button>
         </S.Details>
       </S.Card>
-      <S.Modal>
-        <S.Overlay />
+      <S.Modal className={openModal ? 'is--open' : ''}>
+        <S.Overlay onClick={() => setOpenModal(false)} />
         <S.CardModal>
           <S.InfosModal>
-            <img src="https://fakeimg.pl/350x422" alt="" />
+            <img src={image} alt={title} />
             <div>
-              <h3>Título</h3>
-              <p className="description">Descrição</p>
-              <p className="price">Preço</p>
+              <h3>{title}</h3>
+              <p className="description">{description}</p>
+              <p className="price">{parseToBrl(price)}</p>
               <p className="sale">Vendido e entregue por Riachuelo</p>
               <form>
                 <div className="section">
@@ -83,6 +86,7 @@ const Product = ({ image, title, description, price }: Props) => {
                   </div>
                 </div>
               </form>
+              <Button>Adicionar à sacola</Button>
             </div>
           </S.InfosModal>
           <S.FooterModal>
@@ -90,7 +94,7 @@ const Product = ({ image, title, description, price }: Props) => {
               <img src={iconCheck} alt="Check" />
               <p>Confira detalhes sobre o produto</p>
             </div>
-            <button>
+            <button onClick={() => setOpenModal(false)}>
               <img src={iconClose} alt="Close" />
             </button>
           </S.FooterModal>

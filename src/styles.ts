@@ -8,7 +8,8 @@ export const colors = {
   purple: '#9353ff',
   pink: '#ee5471',
   orange: '#f87f46',
-  grayMenu: '#343A40'
+  grayMenu: '#343A40',
+  red: '#f00'
 }
 
 export const breackpointers = {

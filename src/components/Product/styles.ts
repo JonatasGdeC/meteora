@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { breackpointers, colors } from '../../styles'
 
 export const Card = styled.li`
   max-width: 350px;
@@ -34,7 +34,7 @@ export const Details = styled.div`
   }
 `
 export const Modal = styled.div`
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   position: fixed;
@@ -43,6 +43,10 @@ export const Modal = styled.div`
   width: 100%;
   height: 100%;
   z-index: 1;
+
+  &.is--open {
+    display: flex;
+  }
 `
 
 export const Overlay = styled.div`
@@ -52,10 +56,18 @@ export const Overlay = styled.div`
   z-index: -1;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.8);
 `
 export const CardModal = styled.div`
+  max-width: 700px;
+  width: 100%;
   background-color: ${colors.white};
+
+  @media (max-width: ${breackpointers.tablet}) {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 340px;
+  }
 `
 
 export const InfosModal = styled.div`
@@ -63,6 +75,15 @@ export const InfosModal = styled.div`
   display: flex;
   gap: 16px;
   align-items: top;
+
+  @media (max-width: ${breackpointers.tablet}) {
+    flex-direction: column;
+
+    img {
+      max-width: 310px;
+      max-height: 420px;
+    }
+  }
 
   div {
     h3 {
