@@ -17,20 +17,20 @@ export const Details = styled.div`
   padding: 12px 16px 16px;
 
   h3 {
-    font-size: 16px;
     margin-bottom: 14px;
+    font-size: 16px;
   }
 
   .description {
+    margin-bottom: 16px;
     font-size: 13px;
     line-height: 20px;
-    margin-bottom: 16px;
   }
 
   .price {
+    margin-bottom: 10px;
     font-size: 16px;
     font-weight: bold;
-    margin-bottom: 10px;
   }
 `
 export const Modal = styled.div`
@@ -53,62 +53,69 @@ export const Overlay = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
+  z-index: -1;
 `
 export const CardModal = styled.div`
   max-width: 700px;
   width: 100%;
   background-color: ${colors.white};
+  object-fit: cover;
+  animation: zoomInAndOut 0.3s ease-in-out;
+
+  @keyframes zoomInAndOut {
+    0% {
+      transform: scale(0); /* Zoom inicial */
+    }
+    100% {
+      transform: scale(1); /* Zoom final */
+    }
+  }
 
   @media (max-width: ${breackpointers.tablet}) {
     display: flex;
     flex-direction: column-reverse;
-    width: 340px;
+    width: auto;
+    margin: 10px;
   }
 `
 
 export const InfosModal = styled.div`
-  padding: 16px 16px 32px;
   display: flex;
-  gap: 16px;
   align-items: top;
+  gap: 16px;
+  padding: 16px 16px 32px;
 
   @media (max-width: ${breackpointers.tablet}) {
     flex-direction: column;
-
-    img {
-      max-width: 310px;
-      max-height: 420px;
-    }
   }
 
   div {
     h3 {
+      padding-bottom: 24px;
       font-size: 16px;
       font-weight: bold;
-      padding-bottom: 24px;
     }
 
     .description {
-      font-size: 13px;
-      line-height: 20px;
       padding-bottom: 24px;
       border-bottom: 1px solid ${colors.black};
+      font-size: 13px;
+      line-height: 20px;
     }
 
     .price {
+      padding: 24px 0;
       font-size: 20px;
       font-weight: 500;
-      padding: 24px 0;
     }
 
     .sale {
+      padding-bottom: 16px;
       font-size: 13px;
       color: ${colors.gray};
-      padding-bottom: 16px;
     }
 
     form {
@@ -142,8 +149,8 @@ export const InfosModal = styled.div`
 
 export const FooterModal = styled.div`
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 20px 16px;
   background-color: ${colors.black};
 

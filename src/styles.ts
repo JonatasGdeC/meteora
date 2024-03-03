@@ -44,6 +44,10 @@ export const TitleSection = styled.h2<TitleSection>`
   font-size: 32px;
   font-weight: 400;
   color: ${(props) => (props.color === 'white' ? colors.white : colors.black)};
+
+  @media (max-width: ${breackpointers.tablet}) {
+    font-size: 28px;
+  }
 `
 
 export const Button = styled.button`

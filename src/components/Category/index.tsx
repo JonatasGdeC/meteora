@@ -15,37 +15,37 @@ const Category = () => {
         Busque por categoria
       </TitleSection>
       <ul>
-        <li>
+        <li data-aos="fade-down" data-aos-duration="100">
           <a href="#">
             <img src={imageShirt} alt="Camisa" />
             <p>Camisa</p>
           </a>
         </li>
-        <li>
+        <li data-aos="fade-down" data-aos-duration="200">
           <a href="#">
             <img src={imageHandbag} alt="Bolsa" />
             <p>Bolsa</p>
           </a>
         </li>
-        <li>
+        <li data-aos="fade-down" data-aos-duration="300">
           <a href="#">
             <img src={imageShoes} alt="Calçados" />
             <p>Calçados</p>
           </a>
         </li>
-        <li>
+        <li data-aos="fade-down" data-aos-duration="400">
           <a href="#">
             <img src={imagePants} alt="Calças" />
             <p>Calças</p>
           </a>
         </li>
-        <li>
+        <li data-aos="fade-down" data-aos-duration="500">
           <a href="#">
             <img src={imageCoat} alt="Casacos" />
             <p>Casacos</p>
           </a>
         </li>
-        <li>
+        <li data-aos="fade-down" data-aos-duration="600">
           <a href="#">
             <img src={imageGlasses} alt="Óculos" />
             <p>Óculos</p>

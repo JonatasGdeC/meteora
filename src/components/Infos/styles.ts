@@ -21,9 +21,9 @@ export const List = styled.ul`
     div {
       .title {
         margin-bottom: 16px;
+        color: ${colors.yellow};
         font-size: 16px;
         font-weight: bold;
-        color: ${colors.yellow};
         text-transform: uppercase;
       }
 
@@ -36,8 +36,7 @@ export const List = styled.ul`
   }
 
   @media (max-width: ${breackpointers.desktop}) {
+    align-items: start;
     flex-direction: column;
-    justify-content: left;
-    align-items: center;
   }
 `

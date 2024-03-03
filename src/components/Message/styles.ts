@@ -2,20 +2,24 @@ import styled from 'styled-components'
 import { breackpointers, colors } from '../../styles'
 
 export const Card = styled.div`
-  text-align: center;
   padding: 40px 16px;
   margin: 0 190px 66px;
   border: 2px solid ${colors.black};
+  text-align: center;
 
   p {
-    font-size: 20px;
     margin-bottom: 24px;
+    font-size: 20px;
   }
 
   form {
     div {
       display: flex;
       padding: 0 95px;
+
+      @media (max-width: ${breackpointers.desktop}) {
+        padding: 0;
+      }
 
       input {
         width: 100%;
@@ -34,21 +38,13 @@ export const Card = styled.div`
   }
 
   @media (max-width: ${breackpointers.desktop}) {
-    margin: 0 0 36px;
+    margin: 0 40px 36px;
     padding: 40px 60px;
-
-    form {
-      padding: 0 64px;
-    }
   }
 
   @media (max-width: ${breackpointers.tablet}) {
-    margin: 0 28px;
+    margin: 0 20px 28px;
     padding: 24px 16px;
-
-    form {
-      padding: 0;
-    }
   }
 `
 
@@ -82,6 +78,16 @@ export const CardModal = styled.div`
   width: 100%;
   background-color: ${colors.white};
   border-radius: 8px;
+  animation: zoomInAndOut 0.3s ease-in-out;
+
+  @keyframes zoomInAndOut {
+    0% {
+      transform: scale(0); /* Zoom inicial */
+    }
+    100% {
+      transform: scale(1); /* Zoom final */
+    }
+  }
 
   > p {
     font-size: 16px;
@@ -91,11 +97,11 @@ export const CardModal = styled.div`
 
 export const HeaderModal = styled.div`
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 20px 16px;
-  background-color: ${colors.black};
   border-radius: 8px 8px 0 0;
+  background-color: ${colors.black};
 
   div {
     display: flex;

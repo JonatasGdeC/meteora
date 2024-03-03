@@ -7,8 +7,8 @@ export const Category = styled.div`
 
   ul {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     width: 100%;
     gap: 30px;
 
